@@ -1,0 +1,19 @@
+﻿@model Login
+@{
+    ViewData["Title"] = "ViewDetails";
+}
+
+<div class="container">
+    <div class="mb-3">
+        <h2> The User details </h2>
+    </div>
+    <div class="col-6">
+        <h1> Welcome @ViewBag.Username </h1>
+        <h2> Session @ViewBag.Success </h2>
+    </div>
+    <div class="col-6">
+        <button class="btn btn-primary text-dark" style="width:30%" asp-controller="Login" asp-action="Logout">
+            Click here to Logout
+        </button>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+﻿@model Login
+@{
+    ViewData["Title"] = "Index";
+}
+
+<form method="post" style="background-color:darkkhaki; background-image:url(~/images/book1.jpg)">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2> Login </h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Username"> Username </label>
+            <input asp-for="Username" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Password"> Password </label>
+            <input type="password" asp-for="Password" class="form-control" />
+        </div>
+
+        <button class="btn btn-outline-dark" asp-controller="Login" asp-action="Index"> Login </button>
+        <a class="btn btn-primary" asp-controller="Registration" asp-action="Index">
+            New User? Register Yourself
+        </a>
+    </div>
+</form>
+

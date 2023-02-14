@@ -1,0 +1,50 @@
+﻿@model Login
+
+
+
+<form method="post" style="background-image:radial-gradient(blue,yellow)">
+    <div class="border border-dark p-3 mt-4">
+        <div class="row pb-2 text-dark">
+            <h2> Register a User</h2>
+            <hr />
+        </div>
+        <div class="mb-3 text-dark">
+            <label asp-for="Username"> Username </label>
+            <input asp-for="Username" class="form-control" />
+        </div>
+
+        <div class="mb-3 text-dark">
+            <label asp-for="Email"> Email </label>
+            <input asp-for="Email" class="form-control"/>
+        </div>
+
+        <div class="mb-3 text-dark">
+            <label asp-for="Password"> Password </label>
+            <input type="password" asp-for="Password" class="form-control" />
+        </div>
+
+        <div class="mb-3 text-dark">
+            <label asp-for="Phone"> Phone </label>
+            <input type="number" asp-for="Phone" class="form-control" />
+        </div>
+
+        <div class="mb-3 text-black">
+            <label asp-for="Gender"> Please select your Gender: </label> &nbsp; &nbsp;
+            Male
+            @Html.RadioButtonFor(model => model.Gender, "Male") &nbsp;
+            Female
+            @Html.RadioButtonFor(model => model.Gender, "Female")
+        </div>
+
+        <button class="btn btn-primary" asp-controller="Registration" asp-action="Index"> Click here to Register </button>
+        <a class="btn btn-primary" asp-controller="Login" asp-action="Index">
+            Already a User? Login!
+        </a>
+    </div>
+</form>
+
+
+
+    
+
+ 
